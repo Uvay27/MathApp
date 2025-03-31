@@ -7,9 +7,9 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity<Bundle> : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: android.os.Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -81,11 +81,17 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Result: $result", Toast.LENGTH_SHORT).show()
 
             } catch (e: NumberFormatException) {
+
                 Toast.makeText(this, "Invalid input. Please enter valid numbers.", Toast.LENGTH_SHORT).show()
             }
         } else {
+
             Toast.makeText(this, "Please enter both numbers.", Toast.LENGTH_SHORT).show()
         }
     }
 }
+
+
+
+
 
